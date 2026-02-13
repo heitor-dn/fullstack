@@ -1,0 +1,19 @@
+/*p{
+    color: cornflowerblue;
+    font-size: 14pt;
+} */
+#Nome{
+    color: crimson;
+}
+a:hover{
+    color: purple;
+}
+body{
+    font-size:18pt;
+    text-align: center;
+    background-color:black;
+}
+.texto{
+    color:white;
+    text-align: center;
+}
