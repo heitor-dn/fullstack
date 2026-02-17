@@ -1,9 +1,5 @@
-/*p{
-    color: cornflowerblue;
-    font-size: 14pt;
-} */
 #Nome{
-    color: crimson;
+    color: crimson; 
 }
 a:hover{
     color: purple;
@@ -16,4 +12,12 @@ body{
 .texto{
     color:white;
     text-align: center;
+}
+ol{
+    list-style-position: inside; 
+    padding: 0;
+}
+ul{
+    list-style-position: inside;
+    padding: 0;
 }
