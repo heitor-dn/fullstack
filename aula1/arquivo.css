@@ -1,12 +1,13 @@
 #Nome{
     color: crimson; 
+    text-align: center;
 }
 a:hover{
     color: purple;
 }
 body{
     font-size:18pt;
-    text-align: center;
+    /*text-align: center;*/
     background-color:black;
 }
 .texto{
@@ -20,4 +21,8 @@ ol{
 ul{
     list-style-position: inside;
     padding: 0;
+}
+#link{
+    color: white;
+    text-align: left;
 }
