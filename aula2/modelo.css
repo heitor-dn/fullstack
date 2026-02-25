@@ -1,0 +1,23 @@
+.cabeça{
+    display:flex;
+    background-color: bisque;
+    border:solid 4px darkblue; 
+    justify-content: space-between;
+    align-items: center;
+}
+#titulo{
+    color:darkgreen;
+    font-size: 25px;
+}
+.links{
+    background-color: lightskyblue;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    gap: 150px;
+}
+
+a:hover{
+    color: purple;
+}
