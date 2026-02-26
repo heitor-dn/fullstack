@@ -21,3 +21,29 @@
 a:hover{
     color: purple;
 }
+.intro{
+    background-color: lightgray;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.paragrafos{
+    background-color: lightgray;
+    text-align: center;
+    font-size: 20pt;
+    color:indigo;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.livros{
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 125px;
+}
+.br{
+    background-color: lightgray;
+    height: 70px;
+}
