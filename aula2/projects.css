@@ -1,26 +1,44 @@
-body{
-    background-color: tan;
+body {
+    background-image: linear-gradient(#0a0a0a, #0f2e0f, #145214);
+    margin: 5px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Silkscreen", sans-serif;
+
 }
-#title{
+
+#title {
     text-align: center;
-    color: black;
+    color: white;
 }
-.texto{
-    color: black;
+
+.texto {
+    color: white;
     text-align: center;
+    font-size: 11pt;
 }
-#tabela1{
+
+#tabela1 {
     margin: auto;
     text-align: center;
-    color: black;
+    color: white;
+    width: 60%;
+    border: 3px solid white;
+    border-color: white;
+    border-collapse: collapse;
 }
-a:hover{
-    color: brown;
+
+a:hover {
+    color: goldenrod;
 }
-table{
-    border:2px double black;
-    width: 40%;
+
+th,
+td {
+    border: 2px solid white;
+    height: 50px;
+    width: 30%;
 }
-td, th{
-    border: 1px solid black;
+
+a {
+    color: greenyellow;
 }
