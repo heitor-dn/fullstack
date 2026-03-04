@@ -1,0 +1,26 @@
+body{
+    background-color: tan;
+}
+#title{
+    text-align: center;
+    color: black;
+}
+.texto{
+    color: black;
+    text-align: center;
+}
+#tabela1{
+    margin: auto;
+    text-align: center;
+    color: black;
+}
+a:hover{
+    color: brown;
+}
+table{
+    border:2px double black;
+    width: 40%;
+}
+td, th{
+    border: 1px solid black;
+}
