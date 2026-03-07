@@ -1,0 +1,143 @@
+.links {
+    padding-left: 280px;
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    height: 45px;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.link1 span {
+    color: royalblue;
+}
+
+.link2 span {
+    color: #C8102E;
+}
+
+.link3 span {
+    color: greenyellow;
+}
+
+.link4 span {
+    color: orange;
+}
+
+.link5 span {
+    color: red;
+}
+
+.link6 span {
+    color: #C8102E;
+}
+
+.link7 span {
+    color: #1F4EA3;
+}
+
+.link8 {
+    color: #2F8C7F;
+}
+
+body {
+    background-color: #f2f2f2;
+    margin: 0%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.g1m {
+    display: flex;
+    background-color: #c80000;
+    align-items: center;
+    color: white;
+    height: 75px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+.menu {
+    padding-left: 255px;
+    display: flex;
+}
+
+.tit {
+    padding-left: 525px;
+    font-size: 20pt;
+    padding-bottom: 15px;
+    display: flex;
+}
+
+.busca {
+    padding-left: 250px;
+    display: flex;
+}
+
+.mensagens {
+    width: 680px;
+    height: 551px;
+    background-color: white;
+    border: 1px solid lightgray;
+    justify-content: center;
+    border-radius: 15px;
+    
+}
+
+.noticias {
+
+    display: flex;
+    justify-content: center;
+}
+
+.propag {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: center;
+    display: flex;
+}
+
+.caso {
+    /* background-color: yellow; */
+    margin-left: 23px;
+    margin-top: 23px;
+    font-size: 11pt;
+    color: grey;
+    font-weight: 600;
+}
+
+.textoverm {
+    /* background-color: red; */
+    font-size: 28pt;
+    margin-left: 23px;
+    position: relative;
+    top: 100px;
+    display: flex;
+    margin-right: 90px;
+    font-weight: 700;
+    color: #C8102E;
+
+}
+
+.sub {
+    /* background-color: green; */
+    /* display: flex; */
+    position: relative;
+    /* height: 65px; */
+    top:75px;
+    color: grey;
+    font-size: 11pt;
+    margin-left: 23px;
+    margin-right: 65px;
+    font-weight: 500;
+}
+.nots{
+    /* background-color: blue; */
+    padding-left: 11px;
+}
