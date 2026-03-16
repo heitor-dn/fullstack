@@ -72,3 +72,41 @@ body{
     text-align: center;
     font-size: 13pt;
 }
+.menu{
+    background-color: yellowgreen;
+    position: absolute;
+    left:10px;
+    top:10px;
+    width:80px;
+    height: 40px;
+    border-radius: 10px;
+    color:brown;
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+/* a:hover{
+    color:yellow;
+}
+a{
+    color:brown;
+    text-decoration: none;
+} */
+#home{
+    width:80px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: yellowgreen;
+    color:brown;
+    border:none;
+    font-weight: bold;
+}
+#home:hover{
+    background-color:yellow;
+ }
+/* #bot{
+    background-color: yellowgreen;
+    position: relative;
+    bottom:60px;
+}  */
