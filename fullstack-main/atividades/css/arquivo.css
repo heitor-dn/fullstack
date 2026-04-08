@@ -1,0 +1,165 @@
+.Nome{
+    color: red; 
+    /* text-align: center;  */
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    border: 2px solid red;
+    width: 30%;
+    margin: auto;
+    border-radius: 20px;
+   font-family: "New Rocker", system-ui;
+}
+a:hover{
+    color: grey;
+}
+body{
+    
+    margin: 5px;
+    font-size:18pt;
+    /* text-align: center; */
+    background:linear-gradient(black,darkred, black);
+}
+.texto{
+    color:white;
+    text-align: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15pt;
+}
+ol{
+    list-style-position: inside; 
+    padding: 0;
+}
+ul{
+    list-style-position: inside;
+    padding: 0;
+}
+#link{
+    color: white;
+    text-align: left;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15pt;
+}
+.comida{
+    text-align: center;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    height: 30px;
+}
+.prim{
+    color: black;
+    display: block;
+    /* background-color: gray; */
+    /* border: 2px solid white; */
+    width: 25%;
+    border-radius: 30px;
+    height: auto;
+    text-align: center;
+    color: white;
+}
+.seg{
+    color: black;
+    display: block;
+    /* background-color: gray; */
+    /* border: 2px solid white; */
+    width: 25%;
+    border-radius: 30px;
+    height: auto;
+    text-align: center;
+    color: white;
+}
+.textos{
+    /* background-color: black; */
+    display:flex;
+    justify-content: center;
+    gap:100px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15pt;
+}
+.eu{
+    display:flex;
+    background-color: grey;
+    border: 2px solid red;
+    width: 15%;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
+    
+}
+.mitos{
+    display:flex;
+    justify-content: center;
+    /* background-color: yellow; */
+    height: 55px;
+    color:white;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15pt;
+    gap:60px;
+}
+ul{
+    display:flex;
+    gap:259px;
+    
+}
+.mith{
+    color: white;
+    justify-content: center;
+    /* background-color: purple; */
+    display:flex;
+    height: 55px;
+    font-family: "Space Grotesk", sans-serif;
+}
+.imgs{
+    display: flex;
+    justify-content: center;
+    gap:60px;
+}
+a{
+    color:red;
+}
+.gost{
+    text-align: center;
+    color: white;
+    height: 40px;
+    font-family: "Space Grotesk", sans-serif;
+}
+.musicas{
+    display:flex;
+    justify-content: center;
+    color: white;
+    gap: 450px;
+}
+.iframem{
+    display:flex;
+    justify-content: center;
+    gap:50px;
+    font-family: "Space Grotesk", sans-serif;
+}
+.here{
+    /* background-color: yellow; */
+    width: 560px;
+    text-align: center;
+    height: 60px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15pt;
+}
+.sweet{
+    /* background-color: yellow; */
+    width: 560px;
+    text-align: center;
+    height:60px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15pt;
+}
+.local{
+    color: white;
+    text-align: center;
+    font-family: "Space Grotesk", sans-serif;
+}
+.items{
+    /* background-color: yellow; */
+    width: 300px;
+   justify-content: center;
+   display:flex;
+}

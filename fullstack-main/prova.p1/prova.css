@@ -1,0 +1,233 @@
+.inicio{
+    /* background-color: yellow; */
+    object-fit: cover;
+}
+.inicio img{
+    height: 100%;
+    width: 100%;
+}
+.c{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:300px;
+    left: 45%;
+}
+.comp{
+    display:flex;
+    justify-content:left;
+    gap:100px;
+}
+body{
+    font-size: 18px;
+}
+.texto1{
+    display:flex;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+     /* background-color: yellow; */
+} 
+.texto2{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    
+}
+.botoes{
+    display: flex;
+    justify-content: center;
+    /* background-color: yellow; */
+    gap:20px;
+}
+button{
+    width:215px;
+    height: 50px;
+    border-radius: 50px;
+    border:none;
+}
+#IOS{
+    background-color: hsl(171, 66%, 44%);
+    color: white;
+    box-shadow: 0px 2px 4px  hsl(171, 66%, 44%) ;
+}
+#MAC{
+    background-color: hsl(233, 100%, 69%);
+    color:white;
+    box-shadow: 0px 2px 4px  hsl(233, 100%, 69%) ;
+}
+.keep{
+    display: flex;
+    justify-content: center;
+
+}
+.texto3{
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    margin: auto;
+    text-align: center;
+}
+.specs2{
+    width: 300px;
+}
+.imag1{
+    padding-left: 40px;
+}
+.acess{
+    display: flex;
+    justify-content: center;
+}
+.texto4{
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    margin: auto;
+    text-align: center;
+}
+.imagG{
+    display: flex;
+    justify-content: center;
+}
+.super{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+.texto5{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+.coisas{
+    display: flex;
+    justify-content: center;
+    gap:60px;
+}
+.create{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    /* background-color: yellow; */
+}
+.pnglista{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+}
+.textodentro2{
+    margin:50px;
+    padding-top: 0px;
+}
+
+.coisa2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    /* background-color: yellow; */
+}
+.imagemcoisa2{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+}
+.textodentro{
+    margin:50px;
+    padding-top: 0px;
+}
+.coisa3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    /* background-color: yellow; */
+}
+.imagemcoisa3{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+}
+.textodentro3{
+    margin:50px;
+    padding-top: 0px;
+}
+.logos{
+    display:flex;
+    justify-content: center;
+    gap:100px;
+}
+h1, h2, h4, h5, h3, h6{
+    color: hsl(210, 10%, 33%);
+}
+p{
+    color:hsl(201, 11%, 66%);
+}
+.ultitulo{
+    display: flex;
+    justify-content: center;
+
+}
+.textoult{
+    display: flex;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color:hsl(210, 10%, 33%);
+}
+a:hover{
+    color:hsl(201, 11%, 66%);
+
+}
+.finalmente{
+    display: flex;
+    background-color:beige;
+    height: 150px;
+    
+}
+.logoult{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 150px;
+}
+.conj{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    position: relative;
+    left: 150px;
+}
+.conj2{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    position: relative;
+    left: 300px;
+}
+.conj3{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    position: relative;
+    left: 450px;
+    text-align: top;
+}
+.redes{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 1150px;
+    top:70px;
+    height:50px;
+    /* background-color: yellow; */
+    gap:20px;
+}

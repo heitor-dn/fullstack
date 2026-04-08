@@ -1,0 +1,7 @@
+x = int(input("digite: "))
+y = int(input("digite: "))
+def soma(x,y):
+    teste = x+y
+    return teste
+
+print(soma(x,y))

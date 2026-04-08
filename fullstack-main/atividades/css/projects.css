@@ -1,0 +1,45 @@
+body {
+    background-image: linear-gradient(#0a0a0a, #0f2e0f, #145214);
+    margin: 5px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Silkscreen", sans-serif;
+
+}
+
+#title {
+    text-align: center;
+    color: white;
+}
+
+.texto {
+    color: white;
+    text-align: center;
+    font-size: 11pt;
+}
+
+#tabela1 {
+    margin: auto;
+    text-align: center;
+    color: white;
+    width: 60%;
+    border: 3px solid white;
+    border-color: white;
+    border-collapse: collapse;
+}
+
+a:hover {
+    color: goldenrod;
+}
+
+th,
+td {
+    border: 2px solid white;
+    height: 50px;
+    width: 30%;
+}
+
+a {
+    color: greenyellow;
+    text-decoration: none;
+}

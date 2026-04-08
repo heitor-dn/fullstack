@@ -1,0 +1,226 @@
+.links {
+    padding-left: 280px;
+    display: flex;
+    /* gap: 20px; */
+    background-color: white;
+    height: 45px;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.link1 span {
+    color: royalblue;
+    display:flex;
+    align-items: center;
+    height: 45px;
+    /* background-color: yellow; */
+    width: 105px;
+    justify-content: center;
+}
+
+.link2 span {
+    color: #C8102E;
+    display:flex;
+    align-items: center;
+    height: 45px;
+    /* background-color: yellowgreen; */
+    width: 38px;
+    justify-content: center;
+}
+
+.link3 span {
+    color: rgb(0, 150, 75);
+    display:flex;
+    align-items: center;
+    height: 45px;
+    /* background-color: yellow; */
+    width:38px;
+    justify-content: center;
+}
+
+.link4 span {
+    color: orange;
+    display:flex;
+    align-items: center;
+    height: 45px;
+    /* background-color: yellow; */
+    width:75px;
+    justify-content: center;
+}
+
+.link5 span {
+    color: red;
+    display:flex;
+    align-items: center;
+    height: 45px;
+    width:100px;
+    justify-content: center;
+}
+
+.link6 span {
+    color: #C8102E;
+    display:flex;
+    align-items: center;
+    height: 45px;
+    width: 88px;
+    justify-content: center;
+}
+
+.link7 span {
+    color: #1F4EA3;
+    display:flex;
+    align-items: center;
+    height: 45px;
+    width: 80px;
+    justify-content: center;
+}
+
+.link8 span {
+    color: #2F8C7F;
+    display:flex;
+    align-items: center;
+    height: 45px;
+    width: 65px;
+    justify-content: center;
+    /* background-color: yellow; */
+}
+
+body {
+    background-color: #f2f2f2;
+    margin: 0%;
+    font-family: "Montserrat", sans-serif;
+    height: 5000px;
+}
+
+.g1m {
+    display: flex;
+    background-color: #c4170c;
+    align-items: center;
+    color: white;
+    height: 75px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+.menu {
+    padding-left: 255px;
+    display: flex;
+}
+
+.tit {
+    padding-left: 525px;
+    font-size: 20pt;
+    padding-bottom: 15px;
+    display: flex;
+    /* background-color: yellow; */
+    /* position:relative; */
+    left: 525px;
+    height: 75px;
+    align-items: center;
+}
+
+.busca {
+    padding-left: 250px;
+    display: flex;
+}
+
+.mensagens {
+    width: 680px;
+    height: 551px;
+    background-color: white;
+    border: 1px solid lightgray;
+    justify-content: center;
+    border-radius: 15px;
+    
+}
+
+.noticias {
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+}
+
+.propag {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: center;
+    display: flex;
+}
+
+.caso {
+    /* background-color: yellow; */
+    margin-left: 23px;
+    margin-top: 23px;
+    font-size: 11pt;
+    color: grey;
+    font-weight: 600;
+}
+
+.textoverm {
+    /* background-color: red; */
+    font-size: 28pt;
+    margin-left: 23px;
+    position: relative;
+    top: 100px;
+    display: flex;
+    margin-right: 90px;
+    font-weight: 700;
+    color: #c4170c;
+
+}
+
+.sub {
+    /* background-color: green; */
+    /* display: flex; */
+    position: relative;
+    /* height: 65px; */
+    top:75px;
+    color: grey;
+    font-size: 11pt;
+    margin-left: 23px;
+    margin-right: 65px;
+    font-weight: 500;
+}
+.nots{
+    /* background-color: blue; */
+    padding-left: 11px;
+}
+.link1 span:hover{
+    border-bottom: 4px solid royalblue;
+    padding-bottom: 0;
+}
+.link2 span:hover{
+    border-bottom: 4px solid #C8102E;
+    padding-bottom: 0;   
+}
+.link3 span:hover{
+    border-bottom: 4px solid rgb(0, 150, 75);
+    padding-bottom: 0%;
+}
+.link4 span:hover{
+    border-bottom: 4px solid orange;
+    padding-bottom: 0%;
+}
+.link5 span:hover{
+    border-bottom: 4px solid red;
+    padding-bottom: 0%;
+}
+.link6 span:hover{
+    border-bottom: 4px solid #C8102E;
+    padding-bottom: 0%;
+}
+.link7 span:hover{
+    border-bottom: 4px solid #1F4EA3;
+    padding-bottom: 0%;
+}
+.link8 span:hover{
+    border-bottom: 4px solid #2F8C7F;
+    padding-bottom: 0%;
+}
