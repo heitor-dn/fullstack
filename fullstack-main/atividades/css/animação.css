@@ -1,5 +1,5 @@
 body{
-    background-color: aliceblue;
+    background-color: yellowgreen;
 }
 .centro{
     display: flex;
@@ -11,4 +11,15 @@ body{
 #anima{
     background-color: rgb(3, 174, 0);
     border: 1px solid black;
+}
+.arruma{
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    height: 200px;
+    /* background-color: yellowgreen; */
+}
+#titulo{
+    height: 100px;
+    /* background-color: white; */
 }
