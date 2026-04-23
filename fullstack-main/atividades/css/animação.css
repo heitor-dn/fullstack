@@ -1,5 +1,8 @@
-body{
-    background-color: yellowgreen;
+html, body{
+    background-image: linear-gradient(to bottom right, rgb(143, 195, 31), rgb(197, 253, 30));
+    margin:0;
+    height: 100%;
+    padding:0;
 }
 .centro{
     display: flex;
@@ -22,4 +25,21 @@ body{
 #titulo{
     height: 100px;
     /* background-color: white; */
+}
+#menu{
+    border: none;
+    background-color: yellow;
+    color: red;
+    border-radius: 20px;
+    height: 40px;
+    width: 70px;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: "Chewy", system-ui;
+    font-style: normal;
+    font-size: 15pt;
+}
+#menu:hover{
+    background-color: red;
+    color: yellow;
 }
