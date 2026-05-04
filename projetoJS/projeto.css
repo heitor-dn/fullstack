@@ -1,0 +1,30 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#donkey{
+    background-color: black;
+    image-rendering: pixelated;
+}
+#reiniciar{
+    position: absolute;
+    /* background-color: yellow; */
+    top: 52%;
+    width: 100px;
+    height: 50px;
+}
+#bot2{
+    font: 13px;
+    color:yellow;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    background-color: red;
+    border:none;
+    cursor: pointer;
+    height: 40px;
+}
+#bot2:hover{
+    background-color: rgb(243, 32, 32);
+}
