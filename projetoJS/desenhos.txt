@@ -1,0 +1,58 @@
+Para não ocupar muito espaço no código, deixei aqui o código dos desenhos iniciais para definir 
+a hitbox das plataformas e das escadas, pois após definí-las e colocar as imagens, não eram mais 
+necessárias.
+
+< --- PLATAFORMAS-- ->
+ctx.beginPath();
+ctx.save();
+ctx.strokeStyle = "red";
+ctx.fillRect(0, 770, 300, 800);
+
+ctx.moveTo(300, 770);
+ctx.lineTo(600, 740);
+ctx.lineTo(600, 770);
+ctx.lineTo(300, 800);
+
+ctx.moveTo(540, 680);
+ctx.lineTo(0, 650);
+ctx.lineTo(0, 620);
+ctx.lineTo(540, 650);
+
+ctx.moveTo(60, 560);
+ctx.lineTo(600, 530);
+ctx.lineTo(600, 500);
+ctx.lineTo(60, 530);
+
+ctx.moveTo(540, 440);
+ctx.lineTo(0, 410);
+ctx.lineTo(0, 380);
+ctx.lineTo(540, 410);
+
+ctx.moveTo(60, 320);
+ctx.lineTo(600, 290);
+ctx.lineTo(600, 260);
+ctx.lineTo(60, 290);
+
+ctx.moveTo(540, 200);
+ctx.lineTo(350, 190);
+ctx.lineTo(350, 160);
+ctx.lineTo(540, 170);
+
+ctx.fillRect(0, 160, 350, 30);
+ctx.fillRect(250, 60, 100, 30);
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
+
+<---ESCADAS--->
+
+
+ctx.beginPath();
+ctx.fillStyle = "lightblue";
+ctx.fillRect(480, 650, 40, 120);
+ctx.fillRect(80, 530, 40, 120);
+ctx.fillRect(480, 410, 40, 120);
+ctx.fillRect(80, 290, 40, 120);
+ctx.fillRect(480, 170, 40, 120);
+ctx.fillRect(250, 70, 40, 115)
+ctx.closePath();

@@ -15,64 +15,14 @@ imgViga.src = "viga.png"
 
 function desenhar() {
 
-    // ctx.beginPath();
-    // ctx.fillStyle = "lightblue";
-    // ctx.fillRect(480, 650, 40, 120);
-    // ctx.fillRect(80, 530, 40, 120);
-    // ctx.fillRect(480, 410, 40, 120);
-    // ctx.fillRect(80, 290, 40, 120);
-    // ctx.fillRect(480, 170, 40, 120);
-    // ctx.fillRect(250, 70, 40, 115)
-    // ctx.closePath();
-
     escadas.forEach(esc => {
         desenharEscada(esc.x, esc.y, esc.largura, esc.altura)
     });
 
     plataformas.forEach(plat => {
-        desenharViga(plat.x1, plat.y1, plat.x2, plat.y2, 35);
+        desenharViga(plat.x1, plat.y1, plat.x2, plat.y2, 32);
     });
 
-    // ctx.beginPath();
-    // ctx.save();
-    // ctx.strokeStyle = "red";
-    // ctx.fillRect(0, 770, 300, 800);
-
-    // ctx.moveTo(300, 770);
-    // ctx.lineTo(600, 740);
-    // ctx.lineTo(600, 770);
-    // ctx.lineTo(300, 800);
-
-    // ctx.moveTo(540, 680);
-    // ctx.lineTo(0, 650);
-    // ctx.lineTo(0, 620);
-    // ctx.lineTo(540, 650);
-
-    // ctx.moveTo(60, 560);
-    // ctx.lineTo(600, 530);
-    // ctx.lineTo(600, 500);
-    // ctx.lineTo(60, 530);
-
-    // ctx.moveTo(540, 440);
-    // ctx.lineTo(0, 410);
-    // ctx.lineTo(0, 380);
-    // ctx.lineTo(540, 410);
-
-    // ctx.moveTo(60, 320);
-    // ctx.lineTo(600, 290);
-    // ctx.lineTo(600, 260);
-    // ctx.lineTo(60, 290);
-
-    // ctx.moveTo(540, 200);
-    // ctx.lineTo(350, 190);
-    // ctx.lineTo(350, 160);
-    // ctx.lineTo(540, 170);
-
-    // ctx.fillRect(0, 160, 350, 30);
-    // ctx.fillRect(250, 60, 100, 30);
-    // ctx.fill();
-    // ctx.stroke();
-    // ctx.closePath();
 }
 
 function desenharViga(x1, y1, x2, y2, larguraViga) {
@@ -85,13 +35,13 @@ function desenharViga(x1, y1, x2, y2, larguraViga) {
     ctx.translate(x1, y1);
     ctx.rotate(angulo);
 
-    
-    let tamanhoSprite = 30; 
+
+    let tamanhoSprite = 30;
     for (let i = 0; i < distancia; i += tamanhoSprite) {
         ctx.drawImage(
-            imgViga, 
-            i, 0, 
-            tamanhoSprite + 3, larguraViga 
+            imgViga,
+            i, 0,
+            tamanhoSprite + 3, larguraViga
         );
     }
 
@@ -99,13 +49,13 @@ function desenharViga(x1, y1, x2, y2, larguraViga) {
 }
 function desenharEscada(x, y, largura, altura) {
     const tamanhoSpriteEscada = 32;
-    
+
     ctx.save();
 
-    for (let i = 0; i < altura; i+= tamanhoSpriteEscada) {
+    for (let i = 0; i < altura; i += tamanhoSpriteEscada) {
         ctx.drawImage(
             imgEscada,
-            x, (y + i)-0.5,
+            x, (y + i) - 0.5,
             largura,
             tamanhoSpriteEscada
         );
@@ -139,11 +89,11 @@ let mario = {
             frameX = 0;
         }
 
-        let larguraVisual = 35 * 1.5; 
+        let larguraVisual = 35 * 1.5;
         let alturaVisual = 50 * 1.3;
 
         let offsetX = (larguraVisual - this.largura) / 1.8;
-        let offsetY = (alturaVisual - this.altura)/2.9;
+        let offsetY = (alturaVisual - this.altura) / 2.9;
 
         ctx.drawImage(
             imgAtual,
@@ -211,6 +161,10 @@ const escadas = [
 
 let barris = [];
 let framescont = 0;
+const imgbarril = new Image()
+imgbarril.src = "barril.png"
+const framesBarrilTotais = 8;
+const velocidadeAnimacaoBarril = 8;
 
 window.addEventListener("keydown", (evento) => {
     if (evento.key in teclas) {
@@ -229,7 +183,7 @@ function calcularChao(entidade) {
     let chaoEncontrado = 2000;
 
     plataformas.forEach(plat => {
-        
+
 
         if (entidade.x + entidade.largura > plat.x1 && entidade.x < plat.x2) {
 
@@ -254,7 +208,9 @@ function gerarBarril() {
         altura: 35,
         velocidadeX: 3,
         velocidadeY: 0,
-        direcao: 1
+        direcao: 1,
+        frameX: 0,
+        tempoAnimacao: 0
     };
 
     barris.push(novoBarril);
@@ -356,15 +312,37 @@ function animacao() {
             barril.velocidadeY = 0;
         }
 
-        ctx.fillStyle = "brown";
-        ctx.beginPath();
-        let centroX = barril.x + barril.largura / 2;
-        let centroY = barril.y + barril.altura / 2;
-        let raio = barril.largura / 2;
+        barril.tempoAnimacao++;
+        if (barril.tempoAnimacao >= velocidadeAnimacaoBarril) {
+            barril.frameX = (barril.frameX + 1) % framesBarrilTotais;
+            barril.tempoAnimacao = 0;
+        }
 
-        ctx.arc(centroX, centroY, raio, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.closePath();
+        let larguraFrame = imgbarril.width / framesBarrilTotais;
+
+        ctx.save();
+
+        ctx.translate(barril.x + barril.largura / 2, barril.y + barril.altura / 2);
+
+        ctx.scale(barril.direcao, 1);
+
+        ctx.drawImage(
+            imgbarril,
+            barril.frameX * larguraFrame, 0,
+            larguraFrame, imgbarril.height,
+            -barril.largura / 2, -barril.altura / 2,
+            barril.largura, barril.altura
+        );
+        ctx.restore();
+
+
+        // <---checar a hitbox--->
+
+        // ctx.strokeStyle = "lime"; 
+        // ctx.lineWidth = 2;        
+        // ctx.strokeRect(barril.x, barril.y, barril.largura, barril.altura);
+
+        // <---checar a hitbox--->
 
 
         if (barril.y > canvas.height) {
