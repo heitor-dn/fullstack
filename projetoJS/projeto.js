@@ -108,6 +108,42 @@ let mario = {
     }
 }
 
+const imgDk = new Image();
+imgDk.src = "donkeykongANIMADO.png";
+
+let donkeykong = {
+    x: 15,
+    y: 25,
+    largura: 160,
+    altura: 160,
+    frameX: 0,
+    tempoAnimacao: 0,
+    framesTotais: 12,
+    frameDeSoltar: 9,
+    desenha: function(){
+        let larguraFrame = imgDk.width / this.framesTotais;
+
+        this.tempoAnimacao++;
+        if (this.tempoAnimacao >= 30) {
+
+            this.frameX = (this.frameX + 1) % this.framesTotais;
+            this.tempoAnimacao = 0;
+
+            if (this.frameX === this.frameDeSoltar) {
+                gerarBarril();
+            }
+        }
+
+        ctx.drawImage(
+            imgDk,
+            this.frameX * larguraFrame, 0,
+            larguraFrame, imgDk.height,
+            this.x, this.y,
+            this.largura, this.altura
+        );
+    }
+}
+
 let jogoAtivo = true;
 
 gravidade = 0.8;
@@ -216,6 +252,8 @@ function gerarBarril() {
     barris.push(novoBarril);
 }
 
+
+
 function detectaColisao(mario, barril) {
     return mario.x < barril.x + barril.largura &&
         mario.x + mario.largura > barril.x &&
@@ -230,11 +268,11 @@ function animacao() {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    framescont++;
-    if (framescont >= 180) {
-        gerarBarril();
-        framescont = 0;
-    }
+    // framescont++;
+    // if (framescont >= 180) {
+    //     gerarBarril();
+    //     framescont = 0;
+    // }
 
     let chaoMario = calcularChao(mario);
 
@@ -294,6 +332,8 @@ function animacao() {
     }
 
     desenhar();
+
+    donkeykong.desenha();
 
     barris.forEach((barril, index) => {
 
@@ -356,7 +396,7 @@ function animacao() {
     });
 
     mario.desenha();
-
+    
     if (!jogoAtivo) {
         ctx.beginPath();
         ctx.globalAlpha = 0.5;
