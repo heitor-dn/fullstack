@@ -5,8 +5,9 @@ body{
     background-color: black;
 }
 #donkey{
-    background-color: black;
-    /* image-rendering: pixelated; */
+    /* background-color: skyblue;  */
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 #reiniciar{
     position: absolute;
@@ -28,4 +29,15 @@ body{
 }
 #bot2:hover{
     background-color: rgb(243, 32, 32);
+}
+.pos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellow; */
+    width: 100%;
+}
+html, body{
+    margin: 0;
+    height: 100%;
 }
