@@ -45,12 +45,12 @@ function desenharViga(x1, y1, x2, y2, larguraViga) {
     ctx.rotate(angulo);
 
 
-    let tamanhoSprite = 30;
-    for (let i = 0; i < distancia; i += tamanhoSprite) {
+    let tamanhoSprite = 30; //tamanho do frame da sprite
+    for (let i = 0; i < distancia; i += tamanhoSprite) { //loop para gerar as imagens repetidamente no tamanho da viga
         ctx.drawImage(
             imgViga,
             i, 0,
-            tamanhoSprite + 3, larguraViga
+            tamanhoSprite + 3, larguraViga // o + 3 é para o canto de cada frame encostar mais no proximo para não ter folga entre as imagens
         );
     }
 
@@ -434,7 +434,7 @@ function animarcutscene() {
     );
 
     contadorCutscene++;
-    if (contadorCutscene >= 2) {  //<----------------------------------------------------VELOCIDADE DA CUTSCENE
+    if (contadorCutscene >= 8) {  //<----------------------------------------------------VELOCIDADE DA CUTSCENE
 
         frameCutscene++;
         contadorCutscene = 0;
