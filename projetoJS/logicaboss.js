@@ -18,7 +18,7 @@ const configAnimacoes = {
     "select": { totalFrames: 17, velocidade: 10 },
     "insert": { totalFrames: 20, velocidade: 10 },
     "drop": { totalFrames: 16, velocidade: 10 },
-    "derrotabd": {totalFrames: 11, velocidade: 7}
+    "derrotabd": { totalFrames: 11, velocidade: 7 }
 };
 
 let plinio = {
@@ -182,7 +182,7 @@ let derrotado = false
 
 function atirarMario() {
 
-    if (teclas["z"]) {
+    if (teclas["z"] && cenaAtual == "BOSS_DB") {
 
         if (!mario.podeAtirar && (vidaboss > 50 || vidaboss < 50)) {
             mario.podeAtirar = true;
@@ -200,7 +200,7 @@ function atirarMario() {
             setTimeout(() => { mario.podeAtirar = false; }, 500);
         }
     }
-    if (teclas["z"] && vidaboss == 50 && mario.podeAtirar) {
+    if (teclas["z"] && vidaboss == 50 && mario.podeAtirar && cenaAtual == "BOSS_DB") {
 
         supermario.push({
             x: mario.x + mario.largura,
@@ -257,12 +257,15 @@ function gerenciarProjeteisMario() {
 
             projetilmario.splice(index, 1);
 
-            vidaboss -= 1
+            vidaboss -= 100 //<-----------------------------------------------------DANO
             barravidaboss.largura -= 1
             console.log(vidaboss)
             if (vidaboss <= 0) {
                 professorRN = "derrotabd"
                 derrotado = true
+                frameTransicao = 0;
+                contadorFrames = 0;
+                cenaAtual = "TRANSICAO_PORTAL2"
             }
         }
 
@@ -366,7 +369,7 @@ function executarDanoBoss() {
 
     if (bossAtaqueAtual === "SELECT") {
         if (celulasAfetadas.includes(colMario)) {
-            mortoPorSQL("tente denovo");
+            jogoAtivo = false;
         }
     }
     else if (bossAtaqueAtual === "INSERT") {
@@ -375,18 +378,44 @@ function executarDanoBoss() {
             return colMario === colAlvo && linMario === linAlvo;
         });
         if (colisao) {
-            mortoPorSQL("tente denovo");
+            jogoAtivo = false;
         }
     }
     else if (bossAtaqueAtual === "DROP") {
         if (colMario === celulasAfetadas[0] && mario.noChao) {
-            mortoPorSQL("tente denovo");
+            jogoAtivo = false;
         }
     }
 }
+// <----- portal para ultima fase ----->
+function animarPortal2() {
+    let larguraFrame = animarPortal.width / totalFramesTransicao;
 
-function mortoPorSQL(mensagem) {
-    console.log(mensagem);
-    jogoAtivo = false;
+    ctx.drawImage(
+        animarPortal,
+        frameTransicao * larguraFrame, 0,
+        larguraFrame, animarPortal.height,
+        mario.x, mario.y,
+        50, 60
+    );
 
+    contadorFrames++;
+    if (contadorFrames >= velocidadeTransicao) {
+        frameTransicao++;
+        contadorFrames = 0;
+    }
+
+    if (frameTransicao >= totalFramesTransicao) {
+        cenaAtual = "BOSSFINAL";
+        frameCutscene = 0;
+
+        canvas.width = 1000;
+        canvas.height = 600;
+
+        ctx.imageSmoothingEnabled = false;
+        ctx.webkitImageSmoothingEnabled = false;
+        ctx.msImageSmoothingEnabled = false;
+    }
 }
+
+

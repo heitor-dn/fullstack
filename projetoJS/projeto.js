@@ -70,6 +70,7 @@ function desenharEscada(x, y, largura, altura) {
         );
     }
 }
+
 let mario = {
     x: 30,
     y: 720,
@@ -158,7 +159,6 @@ let jogoAtivo = true;
 
 gravidade = 0.8;
 
-// noChao = true
 
 const sprites = {
     parado: new Image(),
@@ -397,7 +397,7 @@ function faseDK() {
 
 // <---variaveis do portal--->
 const portal = { x: 300, y: 20, largura: 50, altura: 40 };
-let portalAtivo = false;
+// let portalAtivo = false;
 const animarPortal = new Image();
 animarPortal.src = "portalAtivo.png";
 let frameTransicao = 0;
@@ -434,7 +434,7 @@ function animarcutscene() {
     );
 
     contadorCutscene++;
-    if (contadorCutscene >= 8) {  //<----------------------------------------------------VELOCIDADE DA CUTSCENE
+    if (contadorCutscene >= 2) {  //<----------------------------------------------------VELOCIDADE DA CUTSCENE
 
         frameCutscene++;
         contadorCutscene = 0;
@@ -514,6 +514,74 @@ function animacao() {
         mario.desenha();
         movimentomarioboss();
     }
+    else if (cenaAtual == "TRANSICAO_PORTAL2") {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        desenharTabela();
+
+
+        plinio.desenha();
+        barravidaboss.desenha();
+        animarPortal2();
+    }
+    else if (cenaAtual == "BOSSFINAL") {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        if (!vareladerrotado) {
+            bossfin.desenha();
+            gerenciarSpans2();
+            gerenciarSpans();
+            gerenciarDivs();
+            atirarMariofinal();
+            gerenciartirosfinais();
+            mario.desenha();
+            movimentomariobossfinal();
+        } else {
+            bossfin.desenha();
+            varelaprisao();
+            ultimomario();
+        }
+    }
+    else if (cenaAtual == "ULTIMA") {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        desenharcutscene1();
+    }
+    else if (cenaAtual == "CENAFINALMESMO") {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        desenharcenafinal();
+    }
+    else if (cenaAtual == "WINNER") {
+        ctx.globalAlpha = 1.0;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        contadorFrames++
+        if (contadorFrames <= 600) {
+
+            ctx.fillStyle = "white";
+            ctx.font = "24px 'Courier New', monospace";
+            ctx.textAlign = "center";
+
+            if (contadorFrames > 60 && contadorFrames < 240) {
+                ctx.fillText("VARELA: Você conseguiu...", canvas.width / 2, 450);
+            }
+            if (contadorFrames >= 240 && contadorFrames < 420) {
+                ctx.fillText("VARELA: No final não se tratava apenas de donkey kong...", canvas.width / 2, 450);
+            }
+
+            if (contadorFrames >= 420 && contadorFrames < 600) {
+                ctx.fillText("VARELA: Você merece esse chapéu, parabéns.", canvas.width / 2, 450);
+            }
+        } else {
+            winner();
+            document.getElementById("reiniciar").innerHTML='<button id= "botwin" onclick="window.location.href=\'inicio.html\'">menu</button>'
+        }
+    }
+
+
 
     if (!jogoAtivo) {
         ctx.beginPath();
@@ -539,4 +607,7 @@ function animacao() {
 }
 animacao();
 
+
+winner();
+            document.getElementById("reiniciar").innerHTML='<button id= "botwin" onclick="window.location.href=\'inicio.html\'">menu</button>'
 
