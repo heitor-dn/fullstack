@@ -332,65 +332,65 @@ function faseDK() {
 
     donkeykong.desenha();
 
-    // barris.forEach((barril, index) => {
+    barris.forEach((barril, index) => {
 
-    //     let chaoBarril = calcularChao(barril);
+        let chaoBarril = calcularChao(barril);
 
-    //     barril.velocidadeY += gravidade;
-    //     barril.y += barril.velocidadeY;
-    //     barril.x += barril.velocidadeX * barril.direcao;
+        barril.velocidadeY += gravidade;
+        barril.y += barril.velocidadeY;
+        barril.x += barril.velocidadeX * barril.direcao;
 
-    //     if (barril.y + barril.altura >= chaoBarril) {
+        if (barril.y + barril.altura >= chaoBarril) {
 
-    //         if (barril.velocidadeY > 5) {
-    //             barril.direcao *= -1;
-    //         }
-    //         barril.y = chaoBarril - barril.altura;
-    //         barril.velocidadeY = 0;
-    //     }
+            if (barril.velocidadeY > 5) {
+                barril.direcao *= -1;
+            }
+            barril.y = chaoBarril - barril.altura;
+            barril.velocidadeY = 0;
+        }
 
-    //     barril.tempoAnimacao++;
-    //     if (barril.tempoAnimacao >= velocidadeAnimacaoBarril) {
-    //         barril.frameX = (barril.frameX + 1) % framesBarrilTotais;
-    //         barril.tempoAnimacao = 0;
-    //     }
+        barril.tempoAnimacao++;
+        if (barril.tempoAnimacao >= velocidadeAnimacaoBarril) {
+            barril.frameX = (barril.frameX + 1) % framesBarrilTotais;
+            barril.tempoAnimacao = 0;
+        }
 
-    //     let larguraFrame = imgbarril.width / framesBarrilTotais;
+        let larguraFrame = imgbarril.width / framesBarrilTotais;
 
-    //     ctx.save();
+        ctx.save();
 
-    //     ctx.translate(barril.x + barril.largura / 2, barril.y + barril.altura / 2);
+        ctx.translate(barril.x + barril.largura / 2, barril.y + barril.altura / 2);
 
-    //     ctx.scale(barril.direcao, 1);
+        ctx.scale(barril.direcao, 1);
 
-    //     ctx.drawImage(
-    //         imgbarril,
-    //         barril.frameX * larguraFrame, 0,
-    //         larguraFrame, imgbarril.height,
-    //         -barril.largura / 2, -barril.altura / 2,
-    //         barril.largura, barril.altura
-    //     );
-    //     ctx.restore();
-
-
-    //     // <---checar a hitbox--->
-
-    //     // ctx.strokeStyle = "lime"; 
-    //     // ctx.lineWidth = 2;        
-    //     // ctx.strokeRect(barril.x, barril.y, barril.largura, barril.altura);
-
-    //     // <---checar a hitbox--->
+        ctx.drawImage(
+            imgbarril,
+            barril.frameX * larguraFrame, 0,
+            larguraFrame, imgbarril.height,
+            -barril.largura / 2, -barril.altura / 2,
+            barril.largura, barril.altura
+        );
+        ctx.restore();
 
 
-    //     if (barril.y > canvas.height) {
-    //         barris.splice(index, 1);
-    //     }
+        // <---checar a hitbox--->
 
-    //     if (detectaColisao(mario, barril)) {
-    //         jogoAtivo = false;
-    //     }
+        // ctx.strokeStyle = "lime"; 
+        // ctx.lineWidth = 2;        
+        // ctx.strokeRect(barril.x, barril.y, barril.largura, barril.altura);
 
-    // });
+        // <---checar a hitbox--->
+
+
+        if (barril.y > canvas.height) {
+            barris.splice(index, 1);
+        }
+
+        if (detectaColisao(mario, barril)) {
+            jogoAtivo = false;
+        }
+
+    });
 
     mario.desenha();
 }
@@ -577,7 +577,6 @@ function animacao() {
             }
         } else {
             winner();
-            document.getElementById("reiniciar").innerHTML='<button id= "botwin" onclick="window.location.href=\'inicio.html\'">menu</button>'
         }
     }
 
@@ -608,6 +607,5 @@ function animacao() {
 animacao();
 
 
-winner();
-            document.getElementById("reiniciar").innerHTML='<button id= "botwin" onclick="window.location.href=\'inicio.html\'">menu</button>'
+
 

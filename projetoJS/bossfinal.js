@@ -49,7 +49,7 @@ function movimentomariobossfinal() {
 }
 
 // <---variaveis para o boss--->
-let vidabossfinal = 75;
+let vidabossfinal = 50;
 let vareladerrotado = false;
 const varela = {
     varelaparado: new Image(),

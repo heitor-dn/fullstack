@@ -1,0 +1,89 @@
+.tit1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30pt;
+    height: 100px;
+    margin-top: 100px;
+    color: rgb(141, 141, 141);
+}
+
+body {
+    background-color: black;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-image: url("parede.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%s;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grande {
+    
+    display: flex;
+    width: 600px;
+    flex-direction: column;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    border: 3px solid rgb(92, 2, 2);
+    margin: auto;
+    height: 800px;
+    position: absolute;
+    margin-left: 650px;
+
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.jogo {
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Jacquard 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20pt;
+    background-color:rgb(141, 141, 141);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.jogo:hover{
+    background-color: rgb(100, 54, 2);
+    font-size: 24pt;
+    transform: scale(1.1);
+}
+.texto{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color:rgb(141, 141, 141);
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+    width: 500px;
+    margin:auto;
+    font-size: 18pt;
+}
